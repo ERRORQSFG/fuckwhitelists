@@ -42,5 +42,3 @@ vless://39ca3f72-b74e-4728-bc85-229ada043e97@62.152.59.118:443?flow=xtls-rprx-vi
 vless://a8ec0f0d-dc33-40a8-9a13-cd51e98f4b9a@81.200.151.204:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=chrome&sni=eh1.vk.com&pbk=1xYZo087Xr5sqxRkJ5b2vkPPuei6F3oNTlJi45PUrEI&sid=a1b2c3d4e5f60001#FWL • 🇷🇺 RU • VK • t.me/zieng2
 vless://7e67455c-24c0-4392-9cb4-fc5abadebc7b@62.152.59.245:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=random&sni=m.vk.com&pbk=pgG2grngQEtOFJImLfz0AEm-O2IodM2jCY4aMCYQI1U&sid=b2a6e3d42f05c3d1&spx=%2F#FWL • 🇷🇺 RU • VK Mobile • t.me/zieng2
 vless://7e67455c-24c0-4392-9cb4-fc5abadebc7b@62.152.59.41:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=qq&sni=m.vk.com&pbk=pgG2grngQEtOFJImLfz0AEm-O2IodM2jCY4aMCYQI1U&sid=b2a6e3d42f05c3d1&spx=%2F#FWL • 🇷🇺 RU • VK Mobile • t.me/zieng2
-vless://e5cdf347-d91e-4773-8645-e1c4991ee871@212.193.155.80:443?&security=tls&fp=chrome&sni=s35222.cdn.ngenix.net&type=ws&headerType=none&host=s35222.cdn.ngenix.net&path=%2Fstream%2Flive#FWL • 🇩🇪 DE • Ngenix CDN • github.com/igareck/vpn-configs-for-russia
-
