@@ -8,6 +8,7 @@
 vless://77777777-7777-7777-7777-777777777777@127.0.0.1:443?encryption=none&security=none#🚀 Источник определяется криво!
 vless://77777777-7777-7777-7777-777777777777@127.0.0.1:443?encryption=none&security=none#📢 Сижу там -> t.me/Niyakwi
 vless://77777777-7777-7777-7777-777777777777@127.0.0.1:443?encryption=none&security=none#⚠ ИСПОЛЬЗОВАТЬ ТОЛЬКО ПРИ БЕЛЫХ СПИСКАХ
+vless://8e4a52e6-9c20-49eb-acfb-552e9ddf1be4@217.16.31.89:8181?security=reality&encryption=none&pbk=Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw&type=tcp&sni=sso.passport.yandex.ru&fp=chrome&sid=7dbf7d3233971d5c#FWL • 🇷🇺 RU • Yandex • 😇t.me/Niyakwi
 vless://aa3b8daf-52e2-4b4f-9863-d383d27e107a@217.16.24.93:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=qq&sni=eh.vk.com&pbk=10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc&sid=43dcff53849b81e6#FWL • 🇷🇺 RU • VK • github.com/igareck/vpn-configs-for-russia
 vless://aa3b8daf-52e2-4b4f-9863-d383d27e107a@217.16.28.226:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=qq&sni=ads.x5.ru&pbk=10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc&sid=43dcff53849b81e6#FWL • 🇷🇺 RU • X5 Group • github.com/igareck/vpn-configs-for-russia
 vless://aa3b8daf-52e2-4b4f-9863-d383d27e107a@217.16.23.152:443?flow=xtls-rprx-vision&encryption=none&type=tcp&security=reality&fp=qq&sni=ads.x5.ru&pbk=10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc&sid=43dcff53849b81e6#FWL • 🇷🇺 RU • X5 Group • github.com/igareck/vpn-configs-for-russia
