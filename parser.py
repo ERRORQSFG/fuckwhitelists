@@ -15,8 +15,8 @@ import zipfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Настройки для GitHub (замени на свои)
-GH_USER = "ТВОЙ_ЛОГИН"
-GH_REPO = "ИМЯ_РЕПО"
+GH_USER = "ERRORQSFG"
+GH_REPO = "fuckwhitelists"
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
