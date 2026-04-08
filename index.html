@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLESS Subs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: #0f172a; color: white; min-height: 100vh; display: flex; align-items: center; justify-content: center; font-family: sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 24px; }
+    </style>
+</head>
+<body>
+    <div class="glass p-8 m-4 max-w-lg w-full shadow-2xl">
+        <h1 class="text-2xl font-bold mb-2">FuckWhiteLists</h1>
+        <h1 class="text-2xl font-bold mb-2">Просьба использовать подписку ТОЛЬКО при ограничениях интернета (при белых списках)!</h1>
+        <p class="text-blue-400 text-sm mb-6">Серверов в подписке: 0</p>
+        <div class="bg-black/30 p-4 rounded-xl border border-white/5 mb-6">
+            <p class="text-gray-400 text-xs uppercase mb-2">URL подписки</p>
+            <div class="truncate font-mono text-blue-300 text-xs mb-4" id="sub-url">https://raw.githubusercontent.com/ERRORQSFG/fuckwhitelists/main/result.txt</div>
+            <button onclick="copyToClipboard()" class="w-full bg-blue-600 hover:bg-blue-500 py-3 rounded-xl font-bold transition-all active:scale-95">Скопировать ссылку</button>
+        </div>
+        <div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 px-6 py-3 rounded-2xl opacity-0 transition-opacity duration-300 pointer-events-none text-white shadow-2xl"></div>
+    </div>
+    <script>
+        function showToast(msg, isError = false) {
+            const toast = document.getElementById('toast');
+            toast.innerText = msg;
+            toast.style.background = isError ? '#ef4444' : '#22c55e';
+            toast.classList.add('opacity-100');
+            setTimeout(() => { toast.classList.remove('opacity-100'); }, 3000);
+        }
+        async function copyToClipboard() {
+            const url = "https://raw.githubusercontent.com/ERRORQSFG/fuckwhitelists/main/result.txt";
+            try {
+                await navigator.clipboard.writeText(url);
+                showToast("✅ Скопировано!");
+            } catch (err) {
+                const isTG = /Telegram/i.test(navigator.userAgent);
+                if (isTG) {
+                    showToast("❌ Браузер Telegram блокирует копирование. Открой в Chrome/Safari", true);
+                } else {
+                    showToast("❌ Ошибка копирования", true);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
