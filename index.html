@@ -17,7 +17,7 @@
         <p class="text-blue-400 text-sm mb-6">Серверов в подписке: 0</p>
         <div class="bg-black/30 p-4 rounded-xl border border-white/5 mb-6">
             <p class="text-gray-400 text-xs uppercase mb-2">URL подписки</p>
-            <div class="truncate font-mono text-blue-300 text-xs mb-4" id="sub-url">https://raw.githubusercontent.com/ERRORQSFG/fuckwhitelists/main/result.txt</div>
+            <div class="truncate font-mono text-blue-300 text-xs mb-4" id="sub-url">https://raw.githubusercontent.com/ТВОЙ_ЛОГИН/ИМЯ_РЕПО/main/result.txt</div>
             <button onclick="copyToClipboard()" class="w-full bg-blue-600 hover:bg-blue-500 py-3 rounded-xl font-bold transition-all active:scale-95">Скопировать ссылку</button>
         </div>
         <div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 px-6 py-3 rounded-2xl opacity-0 transition-opacity duration-300 pointer-events-none text-white shadow-2xl"></div>
@@ -31,7 +31,7 @@
             setTimeout(() => { toast.classList.remove('opacity-100'); }, 3000);
         }
         async function copyToClipboard() {
-            const url = "https://raw.githubusercontent.com/ERRORQSFG/fuckwhitelists/main/result.txt";
+            const url = "https://raw.githubusercontent.com/ТВОЙ_ЛОГИН/ИМЯ_РЕПО/main/result.txt";
             try {
                 await navigator.clipboard.writeText(url);
                 showToast("✅ Скопировано!");
