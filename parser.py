@@ -15,8 +15,8 @@ import zipfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Настройки для GitHub (замени на свои)
-GH_USER = "ERRORQSFG"
-GH_REPO = "fuckwhitelists"
+GH_USER = "ТВОЙ_ЛОГИН"
+GH_REPO = "ИМЯ_РЕПО"
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -107,71 +107,77 @@ def check_worker(raw_config, source_name, sni_label):
 if __name__ == "__main__":
     ensure_xray()
     
-    # Загрузка SNI
     allowed_snis = {}
-    with open("whitelist/sni.txt", "r") as f:
-        for line in f:
-            if ":" in line:
-                k, v = line.strip().split(":", 1)
-                allowed_snis[k.strip().lower()] = v.strip()
+    if os.path.exists("whitelist/sni.txt"):
+        with open("whitelist/sni.txt", "r", encoding='utf-8') as f:
+            for line in f:
+                if ":" in line:
+                    k, v = line.strip().split(":", 1)
+                    allowed_snis[k.strip().lower()] = v.strip()
 
-    # Загрузка подписок
-    print("📥 Сбор...")
-    with open("subs.txt", "r", encoding='utf-8') as f:
-        sources = [line.strip().split('|') for line in f if '|' in line]
-    
+    print("📥 Сбор данных...")
     all_raw = []
-    for link, name in sources:
-        try:
-            r = reqs.get(link, timeout=10)
-            if r.status_code == 200:
-                nodes = [m.group(0) for m in re.finditer(r'(vless|trojan)://[^\s<>"\']+', r.text)]
-                all_raw.extend([(n, name) for n in nodes])
-        except: continue
+    if os.path.exists("subs.txt"):
+        with open("subs.txt", "r", encoding='utf-8') as f:
+            sources = [line.strip().split('|') for line in f if '|' in line]
+        
+        for link, name in sources:
+            try:
+                # Добавил таймаут и игнор SSL, чтобы не тупило на кривых источниках
+                r = reqs.get(link.strip(), timeout=15, verify=False)
+                if r.status_code == 200:
+                    # Улучшенная регулярка: ловит всё от vless/trojan до конца строки или кавычки
+                    found = re.findall(r'(?:vless|trojan)://[^\s#"\'<>\^]+(?:#[^\s"\'<>]*)?', r.text)
+                    all_raw.extend([(node, name) for node in found])
+            except Exception as e:
+                print(f"❌ Ошибка загрузки {name}: {e}")
+                continue
 
-    # Тест
-# 3. Фильтрация и подготовка тасков
+    print(f"🔎 Найдено {len(all_raw)} сырых ссылок. Фильтрация...")
     tasks = []
     seen = set()
     
-    print(f"🔎 Обработка сырых данных...")
     for raw, s_name in all_raw:
         try:
-            # Очистка ссылки от возможных пробелов по краям
-            raw_clean = raw.strip().replace("&amp;", "&")
+            # Чистим ссылку от мусора
+            raw_clean = raw.strip().split('\\')[0].split('"')[0].split("'")[0]
+            if "&amp;" in raw_clean:
+                raw_clean = raw_clean.replace("&amp;", "&")
             
-            # Пробуем распарсить URL
             p = urlparse(raw_clean)
-            
-            # Если hostname пустой или кривой, urlparse может не выдать ошибку сразу,
-            # но мы проверяем наличие хоста
-            if not p.hostname:
+            if not p.hostname or not p.username:
                 continue
 
             q = parse_qs(p.query)
+            # Достаем SNI или хост
             sni = unquote(q.get('sni', [p.hostname])[0] or "").lower()
             
-            # Логика определения метки SNI
+            # ФИЛЬТР: Если SNI в списке — даем метку. Если нет — ставим 'Unknown', но НЕ УДАЛЯЕМ
             label = allowed_snis.get(sni) or next((v for k, v in allowed_snis.items() if sni.endswith(k)), None)
-            
-            if label and raw_clean not in seen:
+            if not label:
+                label = "Other" # Теперь он пропустит даже те, которых нет в sni.txt
+
+            if raw_clean not in seen:
                 seen.add(raw_clean)
                 tasks.append((raw_clean, s_name, label))
-                
-        except ValueError as e:
-            # Это как раз отловит "Invalid IPv6 URL" и прочий мусор
-            print(f"⚠️ Пропущена битая ссылка: {e}")
-            continue
         except Exception:
             continue
 
-    print(f"🚀 Тестирую {len(tasks)} валидных нод...")
+    # ОТЛАДКА: сколько реально ушло в тест
+    print(f"🚀 В тестер уходит: {len(tasks)} нод")
+    
+    if len(tasks) == 0:
+        print("‼️ ВНИМАНИЕ: Список задач пуст. Проверь форматы в subs.txt или доступ к ссылкам.")
+    
     results = []
+    # Если задач мало, можно уменьшить потоки, но 50 — ок
     with ThreadPoolExecutor(max_workers=THREADS) as ex:
         futures = [ex.submit(check_worker, *t) for t in tasks]
         for f in as_completed(futures):
             res = f.result()
-            if res: results.append(res)
+            if res:
+                results.append(res)
+                print(f"✅ Годно: {res.split('#')[-1]}")
 
     # Сохранение TXT
     with open("result.txt", "w", encoding='utf-8') as f:
