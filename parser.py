@@ -15,8 +15,8 @@ import zipfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Настройки для GitHub (замени на свои)
-GH_USER = "ERRORQSFG"
-GH_REPO = "fuckwhitelists"
+GH_USER = "ТВОЙ_ЛОГИН"
+GH_REPO = "ИМЯ_РЕПО"
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -130,15 +130,42 @@ if __name__ == "__main__":
         except: continue
 
     # Тест
+# 3. Фильтрация и подготовка тасков
     tasks = []
+    seen = set()
+    
+    print(f"🔎 Обработка сырых данных...")
     for raw, s_name in all_raw:
-        p = urlparse(raw.replace("&amp;", "&"))
-        q = parse_qs(p.query)
-        sni = unquote(q.get('sni', [p.hostname])[0] or "").lower()
-        label = allowed_snis.get(sni) or next((v for k, v in allowed_snis.items() if sni.endswith(k)), None)
-        if label: tasks.append((raw, s_name, label))
+        try:
+            # Очистка ссылки от возможных пробелов по краям
+            raw_clean = raw.strip().replace("&amp;", "&")
+            
+            # Пробуем распарсить URL
+            p = urlparse(raw_clean)
+            
+            # Если hostname пустой или кривой, urlparse может не выдать ошибку сразу,
+            # но мы проверяем наличие хоста
+            if not p.hostname:
+                continue
 
-    print(f"🚀 Тестирую {len(tasks)} нод...")
+            q = parse_qs(p.query)
+            sni = unquote(q.get('sni', [p.hostname])[0] or "").lower()
+            
+            # Логика определения метки SNI
+            label = allowed_snis.get(sni) or next((v for k, v in allowed_snis.items() if sni.endswith(k)), None)
+            
+            if label and raw_clean not in seen:
+                seen.add(raw_clean)
+                tasks.append((raw_clean, s_name, label))
+                
+        except ValueError as e:
+            # Это как раз отловит "Invalid IPv6 URL" и прочий мусор
+            print(f"⚠️ Пропущена битая ссылка: {e}")
+            continue
+        except Exception:
+            continue
+
+    print(f"🚀 Тестирую {len(tasks)} валидных нод...")
     results = []
     with ThreadPoolExecutor(max_workers=THREADS) as ex:
         futures = [ex.submit(check_worker, *t) for t in tasks]
@@ -147,11 +174,11 @@ if __name__ == "__main__":
             if res: results.append(res)
 
     # Сохранение TXT
-    with open("sub.txt", "w", encoding='utf-8') as f:
+    with open("result.txt", "w", encoding='utf-8') as f:
         f.write("\n".join(results))
 
     # Генерация HTML (исправленные скобки)
-    sub_url = f"https://raw.githubusercontent.com/{GH_USER}/{GH_REPO}/main/sub.txt"
+    sub_url = f"https://raw.githubusercontent.com/{GH_USER}/{GH_REPO}/main/result.txt"
     html_content = f"""
 <!DOCTYPE html>
 <html lang="ru">
