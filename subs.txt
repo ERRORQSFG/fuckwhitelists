@@ -1,0 +1,55 @@
+https://raw.githubusercontent.com/ksenkovsolo/HardVPN-bypass-WhiteLists-/refs/heads/main/vpn-lte/WHITELIST-ALL.txt|t.me/hardvpn_robot
+https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt|github.com/igareck/vpn-configs-for-russia
+https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt|github.com/igareck/vpn-configs-for-russia
+https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/WHITE-CIDR-RU-checked.txt|github.com/igareck/vpn-configs-for-russia
+https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/WHITE-SNI-RU-all.txt|github.com/igareck/vpn-configs-for-russia
+https://ety.twinkvibe.gay/whitelist|t.me/YoutubeUnBlockRu
+https://raw.githubusercontent.com/ByeWhiteLists/ByeWhiteLists2/refs/heads/main/ByeWhiteLists2.txt|t.me/GoodbyeWLALT \ t.me/ByeWhiteLists2
+https://raw.githubusercontent.com/FLEXIY0/matryoshka-vpn/main/configs/russia_whitelist.txt|github.com/FLEXIY0/matryoshka-vpn
+https://raw.githubusercontent.com/vsevjik/OBWLautoupd/refs/heads/main/ru_vless_reality.txt|t.me/obwhitel
+https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/main/githubmirror/1.txt|github.com/AvenCores/goida-vpn-configs
+https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/main/githubmirror/2.txt|github.com/AvenCores/goida-vpn-configs
+https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/main/githubmirror/3.txt|github.com/AvenCores/goida-vpn-configs
+https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/main/githubmirror/10.txt|github.com/AvenCores/goida-vpn-configs
+https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/main/githubmirror/26.txt|github.com/AvenCores/goida-vpn-configs
+https://raw.githubusercontent.com/RKPchannel/RKP_bypass_configs/refs/heads/main/configs/url_work.txt|t.me/RKP_channel
+https://raw.githubusercontent.com/kort0881/vpn-checker-backend/main/checked/RU_Best/ru_white_all_WHITE.txt|t.me/vlesstrojan
+https://gitverse.ru/api/repos/bywarm/rser/raw/branch/master/selected.txt|t.me/wlrustg
+https://raw.githubusercontent.com/zieng2/wl/main/vless_universal.txt|t.me/zieng2
+https://airlinkvpn.github.io/1.txt|t.me/AirLinkVPNBot \ airlinkvpn.github.io
+https://raw.githubusercontent.com/Niyakwi/Vpn-config/main/Niyakwi.txt|😇t.me/Niyakwi
+https://raw.githubusercontent.com/whoahaow/rjsxrd/main/githubmirror/bypass/bypass-all.txt|t.me/rjsxrd
+https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/Vless-Reality-White-Lists-Rus-Mobile.txt|github.com/igareck/vpn-configs-for-russia
+https://obwl.obprojects.lol/sub.txt|t.me/obprojects
+https://raw.githubusercontent.com/FalerChannel/FalerChannel/refs/heads/main/configs|t.me/FalerChannel
+https://raw.githubusercontent.com/tankist939-afk/Obhod-WL/refs/heads/main/Obhod%20WL|t.me/obwl_forum/1594
+https://gbr.mydan.online/configs|github.com/jsxta/whitelist-russia
+https://raw.githubusercontent.com/Sanuyyq/sub-storage1/refs/heads/main/bs.txt|t.me/wlrustg [2]
+https://raw.githubusercontent.com/gergew452/Generation-Liberty/refs/heads/main/githubmirror/best.txt|github.com/gergew452/Generation-Liberty/
+https://white-lists.vercel.app/api/filter?code=RU&type=white&min=false|white-lists.vercel.app/
+https://github.com/WSJuJuB01/urban-succotash/releases/download/WS_VPN/NOTHINGV5.txt|github.com/WSJuJuB01/urban-succotash/
+https://raw.githubusercontent.com/Ilyacom4ik/free-v2ray-2026/main/subscriptions/FreeCFGHub1.txt|github.com/Ilyacom4ik/free-v2ray-2026/
+https://gist.githubusercontent.com/cvedcvpn/e7221e7f54944f2611c3c0460f3afd30/raw/90bbd746ef545e49ef7e408969c031ae211fdc03/CVEDCVPN|CVEDCVPN (не знаю источник)
+https://raw.githubusercontent.com/prominbro/KfWL/main/KfWL.txt|t.me/kfwlrus
+https://raw.githubusercontent.com/kort0881/vpn-vless-configs-russia/refs/heads/main/githubmirror/ru-sni/vless.txt|github.com/kort0881/vpn-vless-configs-russia
+https://raw.githubusercontent.com/nikita29a/FreeProxyList/refs/heads/main/mirror/1.txt|github.com/nikita29a/FreeProxyList/
+https://github.com/roosterkid/openproxylist/raw/refs/heads/main/V2RAY_RAW.txt|openproxylist.com
+https://github.com/55prosek-lgtm/vpn_config_for_russia/blob/main/whitelist.txt|github.com/55prosek-lgtm/vpn_config_for_russia
+https://rostunnel.vercel.app/mega.txt|t.me/rostunnel
+https://raw.githubusercontent.com/GOESVPN427/GoesVPN77/refs/heads/main/GoesVPN|t.me/keyvpn489
+https://github.com/xiaoji235/airport-free/raw/refs/heads/main/v2ray.txt|github.com/xiaoji235/airport-free/
+https://raw.githubusercontent.com/hiztin/VLESS-PO-GRIBI/refs/heads/main/deploy/sub.txt|t.me/h1zzich
+https://gist.githubusercontent.com/sevushreal-sudo/e9bdf5deaabfe141b289baea9d1356c5/raw/fdef7f158c617b2f1304aebbf6e5850a63bb8558/gistfile1.txt|t.me/sevqqa
+https://raw.githubusercontent.com/amindzlvess-boop/SlashVPN/refs/heads/main/vpn.txt|t.me/infoslashvpn
+https://gitverse.ru/api/repos/cid-uskoritel/cid-white/raw/branch/master/whitelist.txt|t.me/CID_VPN
+https://raw.githubusercontent.com/rtwo2/FastNodes/main/sub/protocols/vless.txt|github.com/rtwo2/FastNodes/
+https://gist.githubusercontent.com/pythoneer-dev-q/49c33dd8d4e279611e30a8c6fd938230/raw/mobile.txt|t.me/nota_vpn_bot
+https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/26.1.txt|hidashimora.github.io/free-vpn-anti-rkn/
+https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/30.txt|hidashimora.github.io/free-vpn-anti-rkn/
+https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/31.txt|hidashimora.github.io/free-vpn-anti-rkn/
+https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/32.1.txt|hidashimora.github.io/free-vpn-anti-rkn/
+https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/33.1.txt|hidashimora.github.io/free-vpn-anti-rkn/
+https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/34.txt|hidashimora.github.io/free-vpn-anti-rkn/
+https://raw.githubusercontent.com/Mihuil121/vpn-checker-backend-fox/main/checked/RU_Best/ru_white.txt|github.com/Mihuil121/vpn-checker-backend-fox
+https://raw.githubusercontent.com/kort0881/vpn-checker-backend/main/checked/RU_Best/ru_white_all_WHITE.txt|kort0881.github.io
+https://raw.githubusercontent.com/kort0881/vpn-checker-backend/main/checked/My_Euro/my_euro_all_WHITE.txt|kort0881.github.io
