@@ -1,0 +1,61 @@
+gosuslugi.ru:Gosuslugi
+esia.gosuslugi.ru:Gosuslugi Authorization
+gu-st.ru:Gosuslugi Static
+gosweb.gosuslugi.ru:Gosuslugi Web
+pos.gosuslugi.ru:Gosuslugi POS
+m.gosuslugi.ru:Gosuslugi Mobile
+vk.com:VK
+m.vk.com:VK Mobile
+vk.ru:VK
+m.vk.ru:VK Mobile
+userapi.com:VK Static
+vk-portal.net:VK Infrastructure
+vkvideo.ru:VK Video
+m.vkvideo.ru:VK Video
+vkmessenger.com:VK Messenger
+vk-apps.com:VK Apps
+ok.ru:Odnoklassniki
+m.ok.ru:OK Mobile
+okcdn.ru:OK Static
+odnoklassniki.ru:Odnoklassniki
+apiok.ru:OK API
+mycdn.me:OK CDN
+mail.ru:Mail.ru
+e.mail.ru:Mail.ru Authorization
+cloud.mail.ru:Mail.ru Cloud
+my.mail.ru:Mail.ru Social Network
+yandex.ru:Yandex
+yandex.net:Yandex Static
+yastatic.net:Yandex Static
+yandexcloud.net:Yandex Cloud
+kinopoisk.ru:Kinopoisk
+x5.ru:X5 Group
+ozon.ru:Ozon
+ozone.ru:Ozon
+ivi.ru:IVI
+ngenix.net:Ngenix CDN
+sbrf-cdn342.ru:Sber CDN
+gov.ru:Government RU
+max.ru:MAX
+nodexphere.net:Nodex
+rbc.ru:RBC
+gpucloud.ru:GPUCloud
+alfabank.ru:Alfa-Bank
+furypay.ru:FuryPay Gateway
+speedload.ru:Speedload
+fastload.site:Fastload
+perekrestok.ru:Perekrestok
+deploy-assure.ru:Local CDN
+rucdn777.com:Russian CDN
+tvdesign.ru:TV
+yandex.com:Yandex
+megafon.ru:MegaFon
+mts.ru:MTS
+x5media.ru:X5 Group Media
+rutube.ru:Rutube Video
+gazprom-media.ru:Gazprom Media
+dzen.ru:Dzen
+tass.ru:TASS
+lenta.ru:Lenta
+ria.ru:Ria
+kp.ru:KP
