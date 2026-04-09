@@ -25,22 +25,7 @@ jobs:
       - name: Run Parser
         run: python parser.py
 
-      - name: Commit and Push
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add sub.txt index.html
-          
-          # Проверяем, есть ли что коммитить
-          if git diff --quiet && git diff --staged --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-          
-          git commit -m "Update nodes: $(date)"
-          
-          # Самое важное: забираем изменения из репозитория, чтобы избежать rejected
-          git pull --rebase origin main
-          
-          # Толкаем
-          git push origin main
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Автоматическое обновление конфигов"
