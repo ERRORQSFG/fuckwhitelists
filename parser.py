@@ -15,8 +15,8 @@ import zipfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Настройки для GitHub (замени на свои)
-GH_USER = "ТВОЙ_ЛОГИН"
-GH_REPO = "ИМЯ_РЕПО"
+GH_USER = "ERRORQSFG"
+GH_REPO = "fuckwhitelists"
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -180,7 +180,7 @@ if __name__ == "__main__":
                 print(f"✅ Годно: {res.split('#')[-1]}")
 
     # Сохранение TXT
-    with open("result.txt", "w", encoding='utf-8') as f:
+    with open("sub.txt", "w", encoding='utf-8') as f:
         f.write("\n".join(results))
 
     # Генерация HTML (исправленные скобки)
