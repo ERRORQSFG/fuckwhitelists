@@ -59,3 +59,6 @@ tass.ru:TASS
 lenta.ru:Lenta
 ria.ru:Ria
 kp.ru:KP
+antivpn.ru:AntiVPN
+mediavitrina.ru:idk
+rtbcdn.ru:idk cdn
